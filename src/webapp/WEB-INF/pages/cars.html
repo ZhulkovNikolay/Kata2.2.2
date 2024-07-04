@@ -3,19 +3,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>index</title>
+    <title>cars</title>
 </head>
 <body>
-index.html page
 
+<div>cars.html page</div>
+<div> <a href="/">go to index page</a> </div>
 <div> <a href="/cars?count=4">/cars?count=4</a> </div>
 <div> <a href="/cars?count=5">/cars?count=5</a> </div>
 <div> <a href="/cars?count=6">/cars?count=6</a> </div>
 
+<p th:text="${carCount}"></p>
+
 <div>
-    <th:block th:each="msg : ${messages}">
+    <th:block th:each="msg : ${carList}">
         <h1 th:text="${msg}"></h1>
     </th:block>
 </div>
+
 </body>
 </html>
