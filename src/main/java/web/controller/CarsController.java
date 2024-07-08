@@ -10,12 +10,15 @@ import web.service.CarServiceImpl;
 @Controller
 public class CarsController {
 
-    @Autowired
     private CarServiceImpl carServiceImp;
 
+    @Autowired
+    public void setCarServiceImp(CarServiceImpl carServiceImp) {
+        this.carServiceImp = carServiceImp;
+    }
+
     @GetMapping(value = "/cars")
-    public String showCarListOnPage(@RequestParam(value = "count", required = false)
-                                    Integer count, Model model) {
+    public String showCarListOnPage(@RequestParam(value = "count", required = false) Integer count, Model model) {
         model.addAttribute("carCount", "Car count = " + count);
 
         if (count <= 5) {

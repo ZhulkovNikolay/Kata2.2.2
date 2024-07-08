@@ -8,13 +8,13 @@ public class Car {
     private String model;
     private int maxSpeed;
 
+    public Car() {
+    }
+
     public Car(int id, String model, int maxSpeed) {
         this.id = id;
         this.model = model;
         this.maxSpeed = maxSpeed;
-    }
-
-    public Car() {
     }
 
     public int getId() {
@@ -55,10 +55,6 @@ public class Car {
 
     @Override
     public String toString() {
-        return "Car{" +
-                "id=" + id +
-                ", model='" + model + '\'' +
-                ", maxSpeed=" + maxSpeed +
-                '}';
+        return "Car{" + "id=" + id + ", model='" + model + '\'' + ", maxSpeed=" + maxSpeed + '}';
     }
 }
