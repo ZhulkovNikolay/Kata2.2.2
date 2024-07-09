@@ -12,14 +12,6 @@ public class CarServiceImpl implements CarService {
 
     private List<Car> cars;
 
-    public List<Car> getCars() {
-        return cars;
-    }
-
-    public void setCars(List<Car> cars) {
-        this.cars = cars;
-    }
-
     public CarServiceImpl() {
         cars = new ArrayList<>();
         cars.add(new Car(1, "T-90", 60));
@@ -32,6 +24,14 @@ public class CarServiceImpl implements CarService {
         cars.add(new Car(8, "T-55", 27));
         cars.add(new Car(9, "T-50", 28));
         cars.add(new Car(10, "T-34", 36));
+    }
+
+    public List<Car> getCars() {
+        return cars;
+    }
+
+    public void setCars(List<Car> cars) {
+        this.cars = cars;
     }
 
     @Override
